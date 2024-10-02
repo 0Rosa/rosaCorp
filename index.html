@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RosaCorp - Especialistas em Eventos</title>
+
+    <!-- Adicionando o favicon -->
+    <link rel="icon" href="https://i.imgur.com/4byjENo.png" type="image/png">
+
+    <!-- Fonte personalizada do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS interno -->
+    <style>
+        /* Estilizando o Header */
+        header {
+            background-color: #ffcccc;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Navegação */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header com navegação -->
+    <header>
+        <!-- Adicionando o ícone à esquerda do título -->
+        <img src="https://i.imgur.com/4byjENo.png" alt="Ícone RosaCorp" class="logo-icon">
+        <div>
+            <h1 style="color:#e60073;">RosaCorp</h1>
+            <p style="color:#4d4d4d;">Especialistas em Eventos</p>
+        </div>
+    </header>
+
+    <!-- Barra de navegação -->
+    <nav>
+        <ul>
+            <li><a href="sobre-nos.html">Sobre Nós</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="blog.html">Blog/Notícias</a></li>
+        </ul>
+    </nav>
+
+    <!-- Carrossel de imagens -->
+    <main>
+        <section class="carousel">
+            <div class="slide">
+                <img src="https://i.imgur.com/YaI8uxr.jpeg" alt="Evento 1" style="width:100%">
+            </div>
+            <div class="slide">
+                <img src="https://i.imgur.com/rMPDdro.jpeg" alt="Evento 2" style="width:100%">
+            </div>
+            <div class="slide">
+                <img src="https://i.imgur.com/xf3GSnt.png" alt="Evento 3" style="width:100%">
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 RosaCorp - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script para o carrossel -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.querySelectorAll(".slide");
+            slides.forEach(slide => slide.style.display = "none");
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Muda de slide a cada 3 segundos
+        }
+    </script>
+</body>
+</html>

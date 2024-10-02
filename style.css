@@ -1,0 +1,215 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definições globais */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #1e1e1e; /* Cor de fundo escura */
+    color: #f4f4f4; /* Texto claro para contraste */
+    padding: 20px;
+}
+
+/* Layout Flexbox */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+header, nav, main, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #2e2e2e; /* Fundo do cabeçalho escuro */
+    color: #f4f4f4; /* Texto claro */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #e60073; /* Destaque de cor */
+}
+
+/* Estilo do ícone ao lado do título */
+.logo-icon {
+    width: 50px; /* Defina o tamanho do ícone */
+    height: 50px;
+}
+
+/* Navegação */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e60073; /* Links com cor de destaque */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4f4f4; /* Links mudam para branco no hover */
+}
+
+/* Box Model */
+section {
+    padding: 20px;
+    background-color: #2e2e2e; /* Seções com fundo escuro */
+    color: #f4f4f4; /* Texto claro */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra leve */
+}
+
+/* Títulos */
+h1, h2, h3 {
+    color: #e60073; /* Cor de destaque nos títulos */
+}
+
+/* Links */
+a {
+    color: #e60073;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para formulários */
+form {
+    background-color: #2e2e2e; /* Fundo do formulário */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra leve */
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+    color: #f4f4f4;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: #3e3e3e; /* Campos com fundo escuro */
+    border: none;
+    border-radius: 4px;
+    color: #f4f4f4; /* Texto claro */
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+form button {
+    background-color: #e60073;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+form button:hover {
+    background-color: #bf005a;
+}
+
+form button[type="reset"] {
+    background-color: #666;
+}
+
+form button[type="reset"]:hover {
+    background-color: #444;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background-color: #2e2e2e;
+    padding: 10px;
+    margin-top: 20px;
+    border-top: 3px solid #e60073;
+    color: #f4f4f4;
+}
+
+/* Carrossel de Imagens */
+.carousel {
+    position: relative;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra para as imagens */
+}
+
+/* Ajustes para textos */
+p {
+    line-height: 1.8;
+}
+
+/* Scrollbar personalizado para navegadores baseados em WebKit */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #e60073; /* Cor da barra de rolagem */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1e1e1e; /* Fundo da barra de rolagem */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    form {
+        padding: 10px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form select,
+    form textarea {
+        padding: 8px;
+    }
+
+    form button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

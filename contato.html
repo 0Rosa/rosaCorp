@@ -30,7 +30,7 @@
         <h2>Fale Conosco</h2>
         <p>Preencha o formulário abaixo para entrar em contato conosco.</p>
 
-        <form action="submit" method="POST">
+        <form id="contactForm">
             <label for="nome">Nome Completo:</label><br>
             <input type="text" id="nome" name="nome" required minlength="3" maxlength="100"><br><br>
 
@@ -65,10 +65,26 @@
             <button type="submit">Enviar</button>
             <button type="reset">Limpar</button>
         </form>
+        
+        <p id="successMessage" style="display:none; color: green;">Formulário enviado com sucesso!</p>
     </section>
 
     <footer>
         <p>&copy; 2024 RosaCorp - Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio real do formulário
+
+            // Aqui você pode adicionar a lógica de envio para um backend se necessário
+
+            // Simula a lógica de envio e exibe uma mensagem de sucesso
+            document.getElementById('successMessage').style.display = 'block';
+
+            // Limpa os campos do formulário após o envio
+            this.reset();
+        });
+    </script>
 </body>
 </html>
